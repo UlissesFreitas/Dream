@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  engineX:
+    image: nginx:latest
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: 64M
+    ports:
+      - "8080:80"
+    networks:
+      - engine
+
+networks:
+  engine:
