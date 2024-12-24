@@ -10,8 +10,13 @@ services:
           memory: 64M
     ports:
       - "8080:80"
+    
+    volumes:
+      - "/var/www/html/site-docker:/usr/share/nginx/html"
+    
     networks:
-      - engine
+      - backend
+
 
 networks:
-  engine:
+  backend:
