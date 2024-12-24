@@ -8,7 +8,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 sudo mkdir /var/www/html/site-docker
 
-docker build -t enginex .
+sudo docker build -t enginex .
 
 docker-compose up -d
 
