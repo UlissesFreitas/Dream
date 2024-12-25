@@ -1,22 +1,13 @@
 version: '3.7'
 
 services:
-  engineX:
+  nginx:
     image: nginx:latest
+    ports:
+      - "8080:80"
     deploy:
       resources:
         limits:
           cpus: "0.3"
-          memory: 64M
-    ports:
-      - "8080:80"
-    
-    volumes:
-      - "/var/www/html/site-docker:/usr/share/nginx/html"
-    
-    networks:
-      - backend
+          memory: "64M"
 
-
-networks:
-  backend:
