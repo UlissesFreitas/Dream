@@ -8,9 +8,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 sudo mkdir /var/www/html/site-docker
 
-sudo docker build -t enginex .
 
-docker-compose up -d
+sudo docker-compose up -d
 
 sudo systemctl start docker
 sudo systemctl enable docker
